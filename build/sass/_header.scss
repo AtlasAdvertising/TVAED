@@ -1,0 +1,122 @@
+.header-wrapper {
+	&.top {
+		background: url(/TVAED/images/bg-tile.png);
+		.social {
+			list-style: none;
+			float: left;
+			li {
+				display: inline-block;
+				a {
+					color: #a4a9ad;
+					font-size: 19px;
+					display: block;
+					padding: 5px;
+					&:hover {
+						color: #5c666f;
+					}
+				}
+			}
+		}
+		.utility {
+			list-style: none;
+			float: right;
+			margin: 5px 0 0 0;
+			li {
+				display: inline-block;
+				margin: 0 10px;
+				a {
+					color: #5c666f;
+					font-size: 13px;
+					font-weight: bold;
+					display: block;
+					&:hover {
+						color: #00687e;
+					}
+				}
+			}
+		}
+	}
+
+	&.bottom {
+		position: relative;
+		z-index: 9999;
+		.logo-wrapper {
+			display: inline-block;
+			max-width: 75%;
+			padding: 10px 0;
+			@media (min-width: $md) {
+				float: left;
+				width: 35%;
+			}
+			img {
+
+			}
+		}
+		#menuElem {
+			display: none;
+			font-size: 0; // fix issue with white-space and inline-block li's
+			@media (min-width: $md) {
+				display: block;
+				width: 65%;
+				float: right;
+			}
+			> li {
+				display: inline-block;
+				width: 20%;
+				position: relative;
+				&:first-child {
+					> a {
+						padding: 15px 25px;
+						@media (min-width: $lg) {
+							padding: 15px 35px;
+						}
+					}
+				}
+				&:hover {
+					> a {
+						color: #00687e;
+					}
+					ul {
+						opacity: 1;
+						visibility: visible;
+					}
+				}
+				a {
+					font-size: 16px;
+					color: #2e363e;
+					font-family: $questrial;
+					display: block;
+					text-align: center;
+					padding: 15px 15px;
+					@media (min-width: $lg) {
+						padding: 15px 30px;
+					}
+				}
+				ul {
+					opacity: 0;
+					visibility: hidden;
+					transition: all 0.1s linear;
+					position: absolute;
+					box-shadow: 0px 4px 5px rgba(0,0,0,0.15);
+					width: 170%;
+					background: #fff;
+					li {
+						a {
+							transition: all 0 ease 0;
+							font-family: $roboto;
+							font-size: 15px;
+							color: #42484d;
+							text-align: left;
+							padding: 5px 15px;
+
+							&:hover {
+								background: #00687e;
+								color: #fff;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

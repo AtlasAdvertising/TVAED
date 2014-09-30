@@ -1,0 +1,15 @@
+.hero-wrapper {
+	.banner-container {
+		ul {
+			position: relative;
+			li {
+				.slotholder {
+					.tp-bgimg.defaultimg {
+						background-size: initial !important;
+						background-position: 25% center !important;
+					}
+				}
+			}
+		}
+	}
+}

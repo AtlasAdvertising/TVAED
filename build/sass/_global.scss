@@ -1,0 +1,27 @@
+ul {
+	margin: 0;
+	padding: 0;
+}
+
+a {
+	transition: all .1s linear;
+	&:hover {
+		text-decoration: none;
+	}
+}
+
+img {
+	max-width: 100%;
+}
+
+.clearfix {
+	&:after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+}
+
+#form {
+	//overflow: hidden;
+}
