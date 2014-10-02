@@ -1,0 +1,60 @@
+.media-center {
+	.social {
+		list-style: none;
+		font-size: 0;
+		li {
+			display: inline-block;
+			margin: 0 10px 0 0;
+			a {
+				font-size: 30px;
+				color: #00687e;
+				padding: 5px;
+				&:hover {
+					color: #42484d;
+				}
+			}
+		}
+	}
+
+	.news {
+		list-style: none;
+		li {
+			padding: 0 0 30px 30px;
+			font-family: $roboto;
+			color: #42484d;
+			position: relative;
+			i {
+				font-size: 22px;
+				color: #00687e;
+				position: absolute;
+				top: 0;
+				left: 0;
+			}
+			.date {
+				font-size: 12px;
+			}
+			.title {
+				font-weight: bold;
+				font-size: 20px;
+				display: inline-block;
+				margin: 0 0 10px 0;
+				&:hover {
+					color: #00687e;
+				}
+			}
+			.text {
+				font-size: 16px;
+				margin: 0 0 10px 0;
+			}
+			.link {
+				font-weight: bold;
+				font-style: italic;
+				color: #00687e;
+				font-size: 12px;
+				&:hover {
+					color: #42484d;
+				}
+			}
+		}
+	}
+}

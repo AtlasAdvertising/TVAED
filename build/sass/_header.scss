@@ -68,7 +68,7 @@
 					> a {
 						padding: 15px 25px;
 						@media (min-width: $lg) {
-							padding: 15px 35px;
+							padding: 15px 40px;
 						}
 					}
 				}
@@ -101,6 +101,13 @@
 					width: 170%;
 					background: #fff;
 					li {
+						position: relative;
+						&:hover {
+							ul {
+								opacity: 1 !important;
+								visibility: visible !important;
+							}
+						}
 						a {
 							transition: all 0 ease 0;
 							font-family: $roboto;
@@ -113,6 +120,13 @@
 								background: #00687e;
 								color: #fff;
 							}
+						}
+						ul {
+							opacity: 0 !important;
+							visibility: hidden !important;
+							left: 100%;
+							top: 0;
+							width: 100%;
 						}
 					}
 				}

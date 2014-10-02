@@ -1,0 +1,129 @@
+.blog {
+	.blogpost-wrapper {
+		display: block;
+		margin: 20px 0;
+		&:hover {
+			.blogpost {
+				.readmore {
+					background: #00687e;
+					span {
+						color: #fff;
+					}
+				}
+			}
+		}
+		.blogpost {
+			background: #fff;
+			position: relative;
+			@media (min-width: $sm) {
+				height: 420px;
+			}
+			@media (min-width: $md) {
+				height: 450px;
+			}
+			@media (min-width: $lg) {
+				height: 420px;
+			}
+			.image {
+				position: relative;
+				margin: 0 0 10px 0;
+				.date {
+					font-family: $roboto;
+					font-weight: bold;
+					font-size: 13px;
+					color: #fff;
+					background: #00687e;
+					position: absolute;
+					top: 0;
+					left: 0;
+					padding: 6px 15px;
+				}
+			}
+			.title {
+				font-family: $roboto-slab;
+				font-weight: bold;
+				font-size: 22px;
+				color: #2e363e;
+				padding: 0 15px;
+				line-height: 1.1;
+			}
+			.author {
+				font-family: $roboto;
+				font-style: italic;
+				font-size: 13px;
+				color: #666666;
+				padding: 0 15px;
+			}
+			.summary {
+				font-family: $roboto;
+				font-size: 13px;
+				color: #42484d;
+				padding: 20px 15px 70px 15px;
+				@media (min-width: $sm) {
+					padding: 20px 15px;
+				}
+			}
+			.readmore {
+				border-top: 3px solid #edecea;
+				padding: 15px;
+				transition: all 0.1s linear;
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				width: 100%;
+				span {
+					font-family: $roboto;
+					font-style: italic;
+					font-size: 12px;
+					color: #00687e;
+					transition: all 0.1s linear;
+				}
+			}
+			&.detail {
+				height: auto;
+				background: transparent;
+				.image {
+					margin: 0 0 20px 0;
+				}
+				.title {
+					font-size: 28px;
+					padding: 0;
+					float: left;
+					margin: 0 0 15px 0;
+				}
+				.tags {
+					float: left;
+					clear: both;
+					margin: 0 0 15px 0;
+					.date, .author, .categories {
+						margin: 0 5px 5px 0;
+						font-size: 12px;
+						float: left;
+						background: rgba(0,0,0,0.1);
+						padding: 5px 10px;
+						line-height: 1;
+						border-radius: 3px;
+						color: #666;
+						font-style: normal;
+						font-family: 'Arial', arial, sans-serif;
+						i {
+							margin: 0 5px 0 0;
+						}
+					}
+				}
+				.summary {
+					padding: 0;
+					clear: both;
+				}
+				.social-media {
+					margin: 0 0 15px 0;
+					clear: both;
+					@media (min-width: $sm) {
+						float: right;
+						clear: none;
+					}
+				}
+			}
+		}
+	}
+}
