@@ -3,6 +3,58 @@
 	line-height: 1.7;
 	padding: 30px 0;
 	.office-info {
+		text-align: center;
+		@media (min-width: $md) {
+			text-align: left;
+		}
+		.partner-login {
+			font-family: $roboto;
+			font-weight: bold;
+			font-size: 16px;
+			color: #fff;
+			background: #00687e;
+			position: relative;
+			display: inline-block;
+			padding: 5px 40px 5px 60px;
+			margin: 10px 0;
+			line-height: 1.65;
+			@media (min-width: $md) {
+				margin: 20px 0 0 0;
+			}
+			&:hover {
+				color: #fff;
+				background: #004e5f;
+			}
+			i {
+				background: #004e5f;
+				position: absolute;
+				top: 0;
+				left: 0;
+				color: #fff;
+				padding: 10px;
+				margin: 0;
+			}
+		}
+		.signoutButton {
+			font-family: $roboto;
+			font-weight: bold;
+			font-size: 16px;
+			color: #fff;
+			background: #00687e;
+			position: relative;
+			display: inline-block;
+			padding: 5px 40px;
+			margin: 10px 0;
+			line-height: 1.65;
+			border: none;
+			&:hover {
+				color: #fff;
+				background: #004e5f;
+			}
+		}
+		.fa-map-marker {
+			font-size: 20px;
+		}
 		div, a {
 			font-family: $roboto;
 			color: #ecebe6;
@@ -20,6 +72,11 @@
 				@media (min-width: $sm) {
 					margin: 0 10px 0 -18px;
 				}
+			}
+		}
+		a {
+			&:hover {
+				color: #868175;
 			}
 		}
 	}
@@ -52,6 +109,42 @@
 						color: #fff;
 					}
 				}
+			}
+		}
+	}
+	.newsletter-wrapper {
+		font-size: 0;
+		text-align: center;
+		padding: 20px 0;
+		@media (min-width: $md) {
+			text-align: left;
+			padding: 0;
+		}
+		label {
+			font-family: $roboto;
+			font-size: 16px;
+			color: #fff;
+			display: block;
+			line-height: 1.2;
+			padding: 0 0 10px 0;
+		}
+		#newsSubscribeBox {
+			font-family: $roboto;
+			font-size: 14px;
+			vertical-align: top;
+			padding: 7px;
+			border: none;
+			width: 75%;
+			line-height: 1.6;
+		}
+		#newsSubscribeBtn {
+			background: url(/TVAED/images/white-arrow.png) no-repeat center center #004e5f;
+			height: 36px;
+			width: 36px;
+			border: none;
+			transition: all 0.1s linear;
+			&:hover {
+				background-color: #00687e;
 			}
 		}
 	}
@@ -100,6 +193,9 @@
 				font-size: 16px;
 				display: block;
 				margin: 0 0 5px 0;
+				&:hover {
+					color: #868175;
+				}
 			}
 			ul.CMSSiteMapList {
 				li.CMSSiteMapListItem {
@@ -112,6 +208,9 @@
 						text-transform: none;
 						margin: 0;
 						padding: 5px 0;
+						&:hover {
+							color: #fff;
+						}
 					}
 				}
 			}

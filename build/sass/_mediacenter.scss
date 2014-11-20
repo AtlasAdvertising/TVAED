@@ -1,4 +1,8 @@
 .media-center {
+	margin: 20px 0 0 0;
+	@media (min-width: $md) {
+		margin: 0;
+	}
 	.social {
 		list-style: none;
 		font-size: 0;
@@ -15,9 +19,19 @@
 			}
 		}
 	}
-
-	.news {
+	
+	.news-wrapper, .blog-wrapper, .video-wrapper {
+		padding: 30px 0;
+	}
+	.title {
+		font-family: $roboto-slab;
+		font-size: 28px;
+		color: #2e363e;
+		margin: 0 0 20px 0;
+	}
+	.news, .blog {
 		list-style: none;
+		padding: 0;
 		li {
 			padding: 0 0 30px 30px;
 			font-family: $roboto;
@@ -57,4 +71,75 @@
 			}
 		}
 	}
+
+	.show-more, .show-less {
+		float: left;
+		transition: all 0.1s linear;
+		cursor: pointer;
+		font-family: $roboto;
+		font-weight: bold;
+		font-size: 14px;
+		color: #fff;
+		background: #00687e;
+		padding: 15px 10px 15px 55px;
+		line-height: 1;
+		position: relative;
+		@media (min-width: $sm) {
+			font-size: 16px;
+			padding: 18px 20px 18px 70px;
+		}
+		&:hover {
+			background: #004e5f;
+		}
+		i {
+			background: #004e5f;
+			position: absolute;
+			padding: 14px;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			line-height: 1;
+			font-size: 18px;
+			@media (min-width: $sm) {
+				padding: 18px;
+				font-size: 22px;
+			}
+		}
+	}
+	.show-less {
+		display: none;
+	}
+	.show-more {
+		margin: 0 10px 0 0;
+	}
+	.video-wrapper {
+		
+	}
+	.VideoGallerySlider {
+		.rsImg.rsMainSlideImage {
+			max-width: none;
+		}
+		.rsThumbs {
+			.rsThumbsContainer  {
+				
+			}
+		}
+		.rsNavItem.rsThumb {
+			border-bottom: 1px solid rgba(0,0,0,0.25) !important;
+			&.rsNavSelected {
+				background: #00687e;
+			}
+			.rsTmb {
+				h5 {
+					font-family: $roboto;
+				}
+			}
+		}
+		.rsOverflow {
+
+		}
+
+	}
 }
+// TVAED Partner
+// tvaed2014

@@ -1,0 +1,257 @@
+.contact {
+	.office {
+		padding: 20px 0;
+		color: #2e363e;
+		.title {
+			font-family: $roboto-slab;
+			font-weight: bold;
+			font-size: 28px;
+			margin: 0 0 10px 0;
+		}
+		.label {
+			font-family: $roboto-slab;
+			font-weight: bold;
+			font-size: 20px;
+			margin: 0 0 5px 0;
+		}
+		div {
+			font-family: $roboto;
+			font-size: 16px;
+			&:last-of-type {
+				margin: 0 0 20px 0;
+			}
+		}
+		span {
+			font-family: $roboto;
+			font-weight: bold;
+			font-size: 14px;
+			margin: 0 10px 0 0;
+		}
+		a {
+			font-size: 16px;
+			color: #2e363e;
+			font-family: $roboto;
+			&:hover {
+				color: #00687e;
+			}
+		}
+	}
+	.social {
+		list-style: none;
+		margin: 20px 0 0 0;
+		li {
+			display: inline-block;
+			margin: 0 2px 0 0;
+			a {
+				font-size: 30px;
+				color: #00687e;
+				padding: 5px;
+				&:hover {
+					color: #2e363e;
+				}
+			}
+		}
+	}
+	.contact-form {
+		padding: 30px 0;
+		.required {
+			font-size: 14px;
+			color: red;
+		}
+		div {
+			font-size: 0;
+			span#p_lt_wpzPagePlaceholder_pageplaceholder_pageplaceholder_lt_wpzContactForm_OnlineForm_viewBiz_lblInfoLabel {
+				font-size: 18px;
+				font-family: $roboto;
+				color: #666;
+			}
+		}
+		.title {
+			font-family: $roboto-slab;
+			font-weight: bold;
+			font-size: 28px;
+			color: #2e363e;
+			background: url(/TVAED/images/contact-icon.png) no-repeat left center;
+			padding: 0 0 0 40px;
+			line-height: 1.2;
+			margin: 0 0 20px 0;
+		}
+		.checkboxes {
+			.checkbox-wrapper {
+				margin: 0 0 5px 0;
+				@media (min-width: $sm) {
+					display: inline-block;
+					width: 30%;
+				}
+				.EditingFormControlNestedControl {
+					float: left;
+					margin: 0 5px 0 0;
+				}
+				label {
+					font-family: $roboto;
+					font-size: 13px;
+					color: #42484d;
+					line-height: 1.6;
+				}
+			}
+		}
+		label {
+			font-family: $roboto;
+			font-size: 14px;
+			color: #6d6e71;
+		}
+		textarea, input[type="text"] {
+			width: 100%;
+			font-size: 14px;
+			border: 1px solid #dbdad1;
+			transition: all 0.2s linear;
+			padding: 5px;
+			&.valid-input {
+				border: solid 1px rgba(108, 190, 69, 0.8);
+				outline: 0;
+				outline: thin dotted \9;
+				box-shadow: inset 0 1px 1px rgba(108, 190, 69, 0.075), 0 0 8px rgba(108, 190, 69, 0.6);
+			}
+			&.invalid-input {
+				border: solid 1px rgba(238, 42, 36, 0.8);
+				outline: 0;
+				outline: thin dotted \9;
+				box-shadow: inset 0 1px 1px rgba(238, 42, 36, 0.075), 0 0 8px rgba(238, 42, 36, 0.6);
+			}
+		}
+		.name, .jobtitle, .company {
+			@media (min-width: $sm) {
+				display: inline-block;
+				width: 33.3%;
+				padding: 0 10px;
+			}
+		}
+		.email, .phone {
+			@media (min-width: $sm) {
+				display: inline-block;
+				width: 50%;
+				padding: 0 10px;
+			}
+		}
+		.name, .email {
+			padding-left: 0;
+		}
+		.company, .phone {
+			padding-right: 0;
+		}
+		.FormButton {
+			font-family: $roboto;
+			font-weight: bold;
+			font-size: 16px;
+			color: #fff;
+			background: url(/TVAED/images/submit-bg.png) no-repeat left center #00687e;
+			border: none;
+			padding: 15px 50px 15px 100px;
+			transition: all 0.1s linear;
+			&:hover {
+				background-color: #004e5f;
+			}
+		}
+	}
+
+	.staff-rotator {
+		padding: 30px 0;
+		.slick {
+			margin: 0;
+		}
+		.staff {
+			margin: 0 auto;
+			padding: 10px;
+			.image {
+				position: relative;
+				overflow: hidden;
+				@media (min-width: $md) {
+					margin: 0 0 10px 0;
+					&:hover {
+						.contact {
+							opacity: 1;
+						}
+					}
+				}
+				img {
+					max-width: none;
+					height: 250px;
+					@media (min-width: $sm) {
+						height: 290px;
+					}
+					@media (min-width: $sm) {
+						height: 275px;
+					}
+				}
+				.contact {
+					transition: all 0.1s linear;
+					text-align: center;
+					@media (min-width: $md) {
+						position: absolute;
+						top: 0;
+						left: 0;
+						bottom: 0;
+						right: 0;
+						background: rgba(0,0,0,0.5);
+						padding: 45% 0 0 0;
+						opacity: 0;
+					}
+					a {
+						display: inline-block;
+						font-size: 30px;
+						color: #c0c1c5;
+						padding: 5px;
+						margin: 0 2px;
+						&:hover {
+							color: #00687e;
+						}
+					}
+				}
+			}
+			.name {
+				font-family: $roboto-slab;
+				font-weight: bold;
+				font-size: 20px;
+				color: #00687e;
+				margin: 0 0 10px 0;
+			}
+			.description {
+				font-family: $roboto;
+				font-size: 14px;
+				color: #42484d;
+			}
+		}
+		.arrows {
+			text-align: center;
+			margin: 0 0 20px 0;
+			.arrow {
+				transition: all 0.1s linear;
+				font-size: 19px;
+				color: #666;
+				border: 1px solid;
+				padding: 14px 21px;
+				border-radius: 50%;
+				margin: 0 5px;
+				cursor: pointer;
+				opacity: 0.5;
+				&:hover {
+					opacity: 1;
+				}
+			}
+		}
+		.header {
+			font-family: $roboto-slab;
+			font-weight: bold;
+			font-size: 28px;
+			color: #2e363e;
+			text-align: center;
+			line-height: 1.2;
+			margin: 0 0 20px 0;
+		}
+	}
+
+	.border-top {
+		border-top: 1px solid rgba(0,0,0,0.15);
+	}
+
+}

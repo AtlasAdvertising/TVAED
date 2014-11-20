@@ -1,6 +1,41 @@
+.search-wrapper {
+	margin: -43px 0 0 0;
+	background: #362f1d;
+	padding: 10px 0;
+	i {
+		font-size: 22px;
+		color: #fff;
+		vertical-align: middle;
+	}
+	#searchBox {
+		font-family: $roboto;
+		font-size: 15px;
+		color: #fff;
+		background: transparent;
+		width: 75%;
+		vertical-align: middle;
+		margin: 0 0 0 5px;
+		border: none;
+		&:focus {
+			outline: none;
+		}
+	}
+	#searchBtn {
+		display: none;
+	}
+	i:last-child {
+		float: right;
+		cursor: pointer;
+		transition: all 0.1s linear;
+		&:hover {
+			color: #77bc43;
+		}
+	}
+}
 .header-wrapper {
 	&.top {
 		background: url(/TVAED/images/bg-tile.png);
+		padding: 3px 0;
 		.social {
 			list-style: none;
 			float: left;
@@ -33,25 +68,111 @@
 						color: #00687e;
 					}
 				}
+				&:last-child {
+					a {
+						font-size: 16px;
+					}
+				}
+				&:nth-child(2) {
+					a {
+						position: relative;
+						.tt {
+							position: absolute;
+							width: 300px;
+							background: #fff;
+							top: 140%;
+							left: -50%;
+							border-radius: 3px;
+							padding: 10px;
+							z-index: 99999;
+							box-shadow: 0px 5px 10px rgba(0,0,0,0.15);
+							text-align: center;
+							visibility: hidden;
+							opacity: 0;
+							transition: all 0.1s linear 0.3s;
+							.title {
+								color: #00687e;
+								font-size: 14px;
+								margin: 0 0 10px 0;
+							}
+							img {
+								box-shadow: 0 0 10px rgba(0,0,0,0.35);
+							}
+							.info {
+								font-weight: normal;
+								font-size: 12px;
+								text-align: left;
+								margin: 10px 0 0 0;
+								color: #888;
+							}
+							&:before {
+								content: "";
+								border-left: 10px solid transparent;
+								border-right: 10px solid transparent;
+								border-bottom: 10px solid #fff;
+								position: absolute;
+								bottom: 100%;
+								left: 70px;
+							}
+						}
+						&:hover {
+							.tt {
+								visibility: visible;
+								opacity: 1;
+							}
+						}
+					}
+				}
 			}
 		}
 	}
 
 	&.bottom {
 		position: relative;
-		z-index: 9999;
+		z-index: 8000;
+		height: 70px;
+		background: #fff;
+		box-shadow: 0 3px 7px rgba(0,0,0,0.22);
+		@media (min-width: $md) {
+			height: auto;
+		}
 		.logo-wrapper {
 			display: inline-block;
-			max-width: 75%;
+			max-width: 80%;
 			padding: 10px 0;
+			height: 70px;
+			font-size: 0;
 			@media (min-width: $md) {
 				float: left;
 				width: 35%;
+				height: auto;
 			}
 			img {
-
+				display: inline-block;
+				vertical-align: middle;
+				@media (min-width: $md) {
+					margin: 12px 0 0 0;
+				}
+			}
+			span {
+				height: 100%;
+				display: inline-block;
+				vertical-align: middle;
 			}
 		}
+		.mobile-btn {
+			position: absolute;
+			font-size: 36px;
+			background: #00687e;
+			color: #fff;
+			padding: 7px 10px;
+			border-radius: 2px;
+			top: 10px;
+			right: 10px;
+			cursor: pointer;
+			z-index: 999;
+		}
+		
 		#menuElem {
 			display: none;
 			font-size: 0; // fix issue with white-space and inline-block li's
@@ -66,9 +187,9 @@
 				position: relative;
 				&:first-child {
 					> a {
-						padding: 15px 25px;
+						padding: 20px 25px;
 						@media (min-width: $lg) {
-							padding: 15px 40px;
+							padding: 20px 40px;
 						}
 					}
 				}
@@ -87,9 +208,10 @@
 					font-family: $questrial;
 					display: block;
 					text-align: center;
-					padding: 15px 15px;
+					padding: 20px 15px;
+					text-transform: uppercase;
 					@media (min-width: $lg) {
-						padding: 15px 30px;
+						padding: 20px 30px;
 					}
 				}
 				ul {
@@ -112,6 +234,7 @@
 							transition: all 0 ease 0;
 							font-family: $roboto;
 							font-size: 15px;
+							text-transform: none;
 							color: #42484d;
 							text-align: left;
 							padding: 5px 15px;
@@ -128,6 +251,121 @@
 							top: 0;
 							width: 100%;
 						}
+					}
+				}
+			}
+		}
+		&.stick {
+			@media (min-width: $md) {
+				position: fixed;
+				top: 0;
+				left: 0;
+				width: 100%;
+			}
+		}
+	}
+}
+
+// mobile menu
+#mobileMenu {
+	z-index: 999999;
+	background: #362f1d;
+	.mm-list {
+		padding: 20px 0 0 0;
+	}
+	.links {
+		.link {
+			color: #fff;
+			padding: 10px 0;
+			display: block;
+			border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+		}
+	}
+	.mobile-exit {
+		position: absolute;
+		top: 5px;
+		left: 5px;
+		font-size: 22px;
+		color: #888;
+		cursor: pointer;
+		transition: all 0.1s linear;
+		&:hover {
+			color: #fff;
+		}
+	}
+	.search-wrapper-mobile {
+		margin: 10px 0 0 0;
+		position: relative;
+		.fa-search {
+			position: absolute;
+			top: 5px;
+			right: 5px;
+			color: #00687e;
+			font-size: 22px;
+		}
+		#search-mobile {
+			width: 100%;
+			background: #fff;
+			color: #42484d;
+			border: 1px solid #888;
+			padding: 5px;
+		}
+	}
+	.CMSSiteMapLink {
+		color: #fff;
+	}
+	.CMSSiteMapListItem {
+		border-color: #555;
+	}
+	.mm-list a.mm-subopen {
+		border-color: #555;
+		background: rgba(0,0,0,0.1);
+		&:after {
+			border-color: #fff;
+		}
+	}
+	.social {
+		text-align: center;
+		li {
+			display: inline-block;
+			margin: 0 10px;
+			a {
+				padding: 5px;
+				font-size: 30px;
+				color: #77bc43;
+				&:hover {
+					color: #5aa621;
+				}
+			}
+		}
+	}
+}
+
+#google_translate_element {
+	float: left;
+	margin: 3px 5px 0 0;
+	opacity: 0.8;
+	transition: all 0.1s linear;
+	&:hover {
+		opacity: 1;
+	}
+	.goog-te-gadget {
+		.goog-te-gadget-simple {
+			border: none;
+			background: transparent;
+			.goog-te-gadget-icon {
+				display: none;
+			}
+			span {
+				.goog-te-menu-value {
+					width: 45px;
+					height: 20px;
+					display: block;
+					text-align: right;
+					padding: 2px 0 0 0;
+					background: url(/TVAED/images/usa.png) no-repeat left 0;
+					span, img {
+						display: none;
 					}
 				}
 			}

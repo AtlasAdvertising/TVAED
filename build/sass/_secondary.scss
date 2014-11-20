@@ -1,6 +1,6 @@
 .secondary-nav {
 	position: relative;
-	z-index: 999;
+	z-index: 990;
 	margin: 0 0 30px 0;
 	> ul {
 		list-style: none;
@@ -9,7 +9,7 @@
 			display: inline-block;
 			position: relative;
 			padding: 0 0 1px 0;
-			margin: 0 -1px 0 0;
+			margin: 0 -1px 10px 0;
 			&:hover {
 				ul {
 					opacity: 1;
@@ -33,12 +33,14 @@
 				visibility: hidden;
 				width: 200px;
 				border-radius: 3px;
+				padding: 10px 0;
 				> li {
 					> a {
 						background: transparent;
 						color: #fff;
 						border: none;
 						transition: none;
+						border-radius: 3px;
 						&:hover {
 							background: #00596b;
 						}
@@ -52,6 +54,11 @@
 				padding: 5px 10px;
 				display: block;
 				font-size: 14px;
+				&:hover {
+					background: #00596b;
+					color: #fff;
+					border-color: #00596b;
+				}
 				i {
 					margin: 0 0 0 5px;
 				}
@@ -93,5 +100,17 @@
 	}
 	h6 {
 		font-size: 12px;
+	}
+	blockquote {
+		border-left: 3px solid #77bc43;
+		padding: 0 0 0 15px;
+		margin: 20px 0 30px 50px;
+	}
+}
+
+.secondary-content {
+	padding: 20px 0;
+	@media (min-width: $md) {
+		padding: 0 0 50px 0;
 	}
 }

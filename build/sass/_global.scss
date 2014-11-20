@@ -28,4 +28,32 @@ img {
 
 .page-wrapper {
 	background: url(/TVAED/images/bg-tile.png);
+	padding: 0 0 50px 0;
+}
+
+.fancybox-overlay {
+	z-index: 9999999;
+}
+
+#loadingMask {
+	background: rgba(0,0,0,0.8);
+	height: 100%;
+	width: 100%;
+	position: fixed;
+	z-index: 999999;
+	top: 0;
+	left: 0;
+	i {
+		font-size: 80px;
+		color: #fff;
+	}
+	.wrapper {
+		position: relative;
+		top: 40%;
+		text-align: center;
+	}
+}
+
+#everythingWrapper {
+	display: none;
 }

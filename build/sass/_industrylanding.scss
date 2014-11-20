@@ -58,6 +58,9 @@
 		img {
 			transition: all 0.1s linear;
 			margin: 0 0 -5px 0;
+			-webkit-backface-visibility: hidden; /* Chrome, Safari, Opera */
+			-moz-backface-visibility: hidden;
+   			backface-visibility: hidden;
 		}
 		&:hover {
 			img {
@@ -84,7 +87,7 @@
 	border-top: 1px solid rgba(0,0,0,0.25);
 	@media (min-width: $md) {
 		border: none;
-		padding: 40px 0;
+		padding: 100px 0 0 0;
 	}
 	.title {
 		font-family: $roboto-slab;
@@ -111,10 +114,14 @@
 	}
 	.image {
 		text-align: center;
+		margin: 0 0 10px 0;
+	}
+	.caption {
+		font-family: $roboto;
+		font-size: 12px;
+		color: #42484d;
+		padding: 0 10px;
 		margin: 0 0 20px 0;
-		@media(min-width: $sm) {
-			text-align: left;
-		}
 	}
 	.link {
 		text-align: center;

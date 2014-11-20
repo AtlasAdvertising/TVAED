@@ -1,0 +1,49 @@
+.success {
+	.header {
+		font-family: $roboto-slab;
+		font-weight: bold;
+		font-size: 28px;
+		color: #2e363e;
+	}
+	ul {
+		list-style: none;
+		li {
+			padding: 20px 0;
+			img {
+				display: block;
+				margin: 0 0 15px 0;
+				@media (min-width: $sm) {
+					float: left;
+					margin: 0 15px 15px 0;
+				}
+			}
+			.title {
+				font-family: $roboto-slab;
+				font-weight: bold;
+				font-size: 22px;
+				color: #2e363e;
+				display: inline-block;
+				margin: 0 0 10px 0;
+				&:hover {
+					color: #00687e;
+				}
+			}
+			.description {
+				font-family: $roboto;
+				font-size: 16px;
+				color: #42484d;
+				margin: 0 0 10px 0;
+			}
+			.link {
+				font-family: $roboto;
+				font-weight: bold;
+				font-size: 14px;
+				font-style: italic;
+				color: #00687e;
+				&:hover {
+					color: #42484d;
+				}
+			}
+		}
+	}
+}

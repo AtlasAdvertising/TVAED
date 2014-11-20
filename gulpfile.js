@@ -1,22 +1,25 @@
 var gulp = require('gulp'),
 	sass = require('gulp-ruby-sass'),
 	prefix = require('gulp-autoprefixer'),
-	ftp = require('gulp-ftp');
+	ftp = require('gulp-ftp'),
+	rename = require('gulp-rename');
 
 // defines path to sass
 var sassRoot = 'build/sass/';
 
-// gulp task
+// compile Sass to CSS
 gulp.task('sass-to-css', function() {
 	return gulp.src(sassRoot + 'main.scss')
-		.pipe(sass({sourcemap: true}))
-		.pipe(prefix("last 3 versions"))
+		//.pipe(sass())		// non-compressed
+		.pipe(sass({style: 'compressed'}))	// compressed
+		//.pipe(prefix("last 3 versions"))		// non-compressed
+		.pipe(rename({suffix: '.min'}))		// compressed
 		.pipe(gulp.dest('public/css'));
 });
 
 // CSS ftp task
 gulp.task('ftp-css', ['sass-to-css'], function() {
-	return gulp.src('public/css/*.css')
+	return gulp.src('public/css/*')
 		.pipe(ftp({
 			host: '66.241.194.6',
 			user: 'zackp',
@@ -25,7 +28,7 @@ gulp.task('ftp-css', ['sass-to-css'], function() {
 		}));
 });
 
-// CSS ftp task
+// JS ftp task
 gulp.task('ftp-js', function() {
 	return gulp.src('public/js/main.js')
 		.pipe(ftp({

@@ -1,14 +1,165 @@
 .hero-wrapper {
-	.banner-container {
-		ul {
-			position: relative;
+	position: relative;
+	background: #2e363e;
+	margin: 0;
+	.slick-slider {
+		margin: 0;
+		.slick-dots {
+			bottom: 0;
+			right: 5%;
+			width: auto;
+			@media (min-width: $lg) {
+				right: 10%;
+			}
 			li {
-				.slotholder {
-					.tp-bgimg.defaultimg {
-						background-size: initial !important;
-						background-position: 25% center !important;
+				height: auto;
+				width: auto;
+				margin: 0 1px;
+				button {
+					font-family: $roboto-slab;
+					font-weight: bold;
+					font-size: 18px;
+					color: #fff;
+					background: #5c666f;
+					height: auto;
+					width: auto;
+					padding: 20px 15px;
+					&:before {
+						content: "";
 					}
 				}
+				&.slick-active {
+					button {
+						background: #77bc43;
+					}
+				}
+			}
+		}
+	}
+	.slick-slide {
+		font-size: 0;
+		padding: 20px 0 40px 0;
+		@media (min-width: $md) {
+			padding: 40px 0;
+		}
+		.image {
+			margin: 0 0 10px 0;
+			text-align: center;
+			transition: all 0.5s linear 0.5s;
+			opacity: 0;
+			padding: 0 30px;
+			@media (min-width: $md) {
+				display: inline-block;
+				width: 50%;
+				vertical-align: top;
+				padding: 0 15px 0 0;
+			}
+			img {
+				display: inline;
+			}
+		}
+		.caption {
+			@media (min-width: $md) {
+				display: inline-block;
+				width: 50%;
+				vertical-align: top;
+				padding: 0 0 0 15px;
+				// top: -100px;
+				top: 0;
+			}
+			position: relative;
+			// transition: all 0.5s linear 0.5s;
+			// opacity: 0;
+			// top: 100px;
+			top: 0;
+		}
+		.title {
+			font-family: $roboto-slab;
+			font-weight: bold;
+			font-size: 30px;
+			color: #fff;
+			margin: 0 0 10px 0;
+			line-height: 1.1;
+			@media (min-width: $sm) {
+				font-size: 44px;
+			}
+		}
+		.description {
+			font-family: $roboto;
+			font-size: 14px;
+			color: #fff;
+			margin: 0 0 20px 0;
+			display: none;
+			@media (min-width: $sm) {
+				display: block;
+			}
+		}
+		a {
+			font-family: $roboto;
+			font-weight: bold;
+			font-size: 16px;
+			color: #fff;
+			background: #77bc43;
+			padding: 13px 20px 13px 0;
+			display: inline-block;
+			position: relative;
+			z-index: 999;
+			&:hover {
+				background: #5aa621;
+			}
+			i {
+				font-size: 22px;
+				background: #5aa621;
+				padding: 14px;
+				margin: -13px 20px -13px 0;
+			}
+		}
+		&.slick-active {
+			.image {
+				opacity: 1;
+			}
+			.caption {
+				opacity: 1;
+				// top: 0;
+			}
+		}
+	}
+	&:hover {
+		.arrows {
+			.arrow {
+				opacity: 1;
+			}
+		}
+	}
+	.arrows {
+		visibility: hidden;
+		position: absolute;
+		height: 80px;
+		width: 100%;
+		bottom: 50%;
+		z-index: 1;
+		@media (min-width: $sm) {
+			visibility: visible;
+		}
+		.arrow {
+			transition: all 0.3s linear;
+			opacity: 0;
+			position: absolute;
+			font-size: 19px;
+			font-weight: bold;
+			color: #fff;
+			background: #00687e;
+			padding: 30px 17px;
+			cursor: pointer;
+			top: 50%;
+			&:hover {
+				background: #004e5f;
+			}
+			&.prev {
+				left: 10px;
+			}
+			&.next {
+				right: 10px;
 			}
 		}
 	}

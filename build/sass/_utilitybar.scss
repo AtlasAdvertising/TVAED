@@ -22,6 +22,7 @@
 }
 
 .PageUtility {
+	//z-index: 99 !important;
 	.PageUtility_Wrapper {
 		width: 260px;
 		padding: 16px 0;
@@ -37,11 +38,12 @@
 		}
 		#Utility_MyFavorites, #Utility_AddPage, #Utility_Print {
 			&:after {
-				content: ": :";
+				content: "::";
+				margin: 0 3px 0 2px;
 			}
 		}
 		.ImgBg {
-			display: none;
+			visibility: hidden;
 		}
 	}
 	#PageUtilityDropdown {

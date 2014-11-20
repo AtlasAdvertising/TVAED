@@ -8,6 +8,7 @@
 		font-weight: bold;
 		font-size: 22px;
 		color: #2e363e;
+		margin: 0 0 10px 0;
 	}
 	.links-list {
 		list-style: none;
@@ -43,8 +44,11 @@
 					}
 					.SidebarListMyFavorites {
 						float: right;
-						margin: 7px 0 0 0;
+						margin: 2px 0 0 0;
 						cursor: pointer;
+						img {
+							padding: 5px;
+						}
 					}
 					a {
 						font-family: $roboto;
@@ -74,6 +78,8 @@
 					font-style: italic;
 					font-weight: bold;
 					color: #00687e;
+					display: inline-block;
+					margin: 5px 0 0 0;
 					&:after {
 						content: "...";
 					}
@@ -109,31 +115,52 @@
 				}
 		    }
 		    .controls {
-		    	margin: 0 0 15px 0;
+		    	margin: 0 0 5px 0;
+		    	font-size: 0;
 				span {
-					height: 25px;
-					width: 25px;
+					height: 35px;
+					width: 35px;
 					display: inline-block;
+					margin: 0 5px 0 0;
 					background: #77bc43;
 					position: relative;
 					cursor: pointer;
 					transition: all 0.1s linear;
+					@media (min-width: $md) {
+						height: 25px;
+						width: 25px;
+					}
 					&:hover {
 						background: darken(#77bc43, 10%);
 					}
 					i {
 						color: #fff;
 						position: absolute;
-						top: 5px;
-						left: 6px;
+						top: 10px;
+						left: 10px;
+						font-size: 14px;
+						@media (min-width: $md) {
+							top: 5px;
+							left: 6px;
+						}
 					}
 				}
+		    }
+		    .view-all {
+		    	font-family: $roboto;
+		    	font-size: 11px;
+		    	color: #00687e;
+		    	display: inline-block;
+		    	margin: 0 0 5px 0;
+		    	&:hover {
+		    		color: #5c666f;
+		    	}
 		    }
 		    .name {
 		    	font-family: $roboto-slab;
 		    	font-weight: bold;
 		    	color: #00687e;
-		    	font-size: 20px;
+		    	font-size: 16px;
 		    	line-height: 1.1;
 		    	padding: 0 0 5px 0;
 		    	margin: 0 0 0 110px;

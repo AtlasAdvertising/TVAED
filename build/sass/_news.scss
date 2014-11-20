@@ -1,0 +1,46 @@
+.news {
+	.header {
+		font-family: $roboto-slab;
+		font-weight: bold;
+		font-size: 28px;
+		color: #2e363e;
+	}
+	.news-list {
+		li {
+			padding: 20px 0 20px 20px;
+			position: relative;
+			i {
+				position: absolute;
+				left: 0;
+				top: 20px;
+				font-size: 18px;
+			}
+			.date {
+				font-family: $roboto;
+				font-size: 12px;
+				color: #42484d;
+			}
+			.title {
+				font-size: 22px;
+				margin: 0 0 10px 0;
+			}
+			.text {
+				margin: 0 0 10px 0;
+				font-family: $roboto;
+				font-size: 16px;
+				color: #42484d;
+			}
+			.link {
+				font-family: $roboto;
+				font-weight: bold;
+				font-style: italic;
+				font-size: 14px;
+				color: #00687e;
+				margin: 0;
+				&:hover {
+					color: #42484d;
+				}
+			}
+		}
+	}
+}
