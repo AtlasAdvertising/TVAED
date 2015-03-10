@@ -1,119 +1,119 @@
 .secondary-nav {
-	position: relative;
-	z-index: 990;
-	margin: 0 0 30px 0;
-	> ul {
-		list-style: none;
-		font-size: 0;
-		> li {
-			display: inline-block;
-			position: relative;
-			padding: 0 0 1px 0;
-			margin: 0 -1px 10px 0;
-			&:hover {
-				ul {
-					opacity: 1;
-					visibility: visible;
-				}
-			}
-			&.HighLighted {
-				> a {
-					color: #fff;
-					background: #00687e;
-					border-color: #00687e;
-				}
-			}
-			ul {
-				position: absolute;
-				top: 100%;
-				left: 0;
-				background: #00687e;
-				transition: all 0.1s linear;
-				opacity: 0;
-				visibility: hidden;
-				width: 200px;
-				border-radius: 3px;
-				padding: 10px 0;
-				> li {
-					> a {
-						background: transparent;
-						color: #fff;
-						border: none;
-						transition: none;
-						border-radius: 3px;
-						&:hover {
-							background: #00596b;
-						}
-					}
-				}
-			}
-			a {
-				background: #fff;
-				color: #00687e;
-				border: 1px solid;
-				padding: 5px 10px;
-				display: block;
-				font-size: 14px;
-				&:hover {
-					background: #00596b;
-					color: #fff;
-					border-color: #00596b;
-				}
-				i {
-					margin: 0 0 0 5px;
-				}
-			}
-		}
-	}
+    position: relative;
+    z-index: 990;
+    margin: 0 0 30px 0;
+    > ul {
+        list-style: none;
+        font-size: 0;
+        > li {
+            display: inline-block;
+            position: relative;
+            padding: 0 0 1px 0;
+            margin: 0 -1px 10px 0;
+            &:hover {
+                ul {
+                    opacity: 1;
+                    visibility: visible;
+                }
+            }
+            &.HighLighted {
+                > a {
+                    color: #fff;
+                    background: #00596b;
+                }
+            }
+            ul {
+                position: absolute;
+                top: 100%;
+                left: 0;
+                background: #00687e;
+                transition: all 0.1s linear;
+                opacity: 0;
+                visibility: hidden;
+                width: 200px;
+                border-radius: 3px;
+                padding: 10px 0;
+                > li {
+                    > a {
+                        background: transparent;
+                        color: #fff;
+                        border: none;
+                        transition: none;
+                        border-radius: 3px;
+                        &:hover {
+                            background: #00596b;
+                        }
+                    }
+                }
+            }
+            a {
+                background: #00687e;
+                color: #fff;
+                border: 1px solid;
+                padding: 5px 10px;
+                display: block;
+                font-size: 14px;
+                &:hover {
+                    background: #00596b;
+                    color: #fff;
+                    border-color: #00596b;
+                }
+                i {
+                    margin: 0 0 0 5px;
+                }
+            }
+        }
+    }
 }
 
 .editable-text {
-	font-family: $roboto;
-	font-size: 16px;
-	color: #42484d;
-	h1, h2, h3 {
-		font-family: $roboto-slab;
-		font-weight: bold;
-		color: #2e363e;
-	}
-	h1 {
-		font-size: 34px;
-	}
-	h2 {
-		font-size: 28px;
-	}
-	h3 {
-		font-size: 22px;
-	}
-	h4 {
-		font-family: $roboto;
-		font-weight: bold;
-		font-size: 14px;
-		color: #42484d;
-	}
-	h5, h6 {
-		font-family: $roboto-slab;
-		color: #42484d;
-	}
-	h5 {
-		font-size: 13px;
-	}
-	h6 {
-		font-size: 12px;
-	}
-	blockquote {
-		border-left: 3px solid #77bc43;
-		padding: 0 0 0 15px;
-		margin: 20px 0 30px 50px;
-	}
-	td {
-		vertical-align: top;
-	}
+    font-family: $roboto;
+    font-size: 16px;
+    color: #42484d;
+    h1, h2, h3 {
+        font-family: $roboto-slab;
+        font-weight: bold;
+        color: #2e363e;
+    }
+    h1 {
+        font-size: 34px;
+    }
+    h2 {
+        font-size: 28px;
+    }
+    h3 {
+        font-size: 22px;
+    }
+    h4 {
+        font-family: $roboto;
+        font-weight: bold;
+        font-size: 14px;
+        color: #42484d;
+    }
+    h5,
+    h6 {
+        font-family: $roboto-slab;
+        color: #42484d;
+    }
+    h5 {
+        font-size: 13px;
+    }
+    h6 {
+        font-size: 12px;
+    }
+    blockquote {
+        border-left: 3px solid #77bc43;
+        padding: 0 0 0 15px;
+        margin: 20px 0 30px 50px;
+    }
+    td {
+        vertical-align: top;
+    }
 }
 
 .secondary-content {
-	padding: 20px 0;
-	@media (min-width: $md) {
-		padding: 0 0 50px 0;
-	}
+    padding: 20px 0;
+    @media (min-width: $md) {
+        padding: 0 0 50px 0;
+    }
 }
