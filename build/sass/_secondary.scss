@@ -1,15 +1,24 @@
+.SectionHeaderRepeater{
+    text-transform: uppercase;
+    font-family: "Questrial",sans-serif;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
 .secondary-nav {
     position: relative;
     z-index: 990;
-    margin: 0 0 30px 0;
+    margin: 30px 0 30px 0;
+    font-family: "Questrial",sans-serif;
+    font-size: 15px;
+    font-weight: bold;
     > ul {
         list-style: none;
-        font-size: 0;
-        > li {
-            display: inline-block;
-            position: relative;
-            padding: 0 0 1px 0;
-            margin: 0 -1px 10px 0;
+        border-top:solid 1px #c4c4c2;
+        li {
+            display: block;
+            position: relative;            
+            border-bottom:solid 1px #c4c4c2;
             &:hover {
                 ul {
                     opacity: 1;
@@ -18,49 +27,54 @@
             }
             &.HighLighted {
                 > a {
-                    color: #fff;
-                    background: #00596b;
+                    color: #00687e;                    
                 }
+                ul{
+                    display:block;
+                }   
+                
             }
             ul {
-                position: absolute;
+                display:none;
+                position: relative;
                 top: 100%;
                 left: 0;
-                background: #00687e;
-                transition: all 0.1s linear;
-                opacity: 0;
-                visibility: hidden;
                 width: 200px;
                 border-radius: 3px;
-                padding: 10px 0;
+                padding:0px 0px 0px 10px;
                 > li {
+                    border:0px;
                     > a {
-                        background: transparent;
-                        color: #fff;
+                        color: #000000;
                         border: none;
                         transition: none;
                         border-radius: 3px;
+                        padding-top: 0px;
                         &:hover {
-                            background: #00596b;
+                            color: #00687e;
                         }
                     }
                 }
             }
             a {
-                background: #00687e;
-                color: #fff;
-                border: 1px solid;
-                padding: 5px 10px;
+                color: #000000;
                 display: block;
                 font-size: 14px;
+                width:100%;
+                padding:10px 0px;
                 &:hover {
-                    background: #00596b;
-                    color: #fff;
-                    border-color: #00596b;
+                    color: #00687e;
+                    text-decoration: none;
                 }
-                i {
-                    margin: 0 0 0 5px;
-                }
+            }
+            i {
+                position: absolute;
+                padding: 15px 10px;
+                font-size: 16px;
+                color: #848483;
+                right:0px;
+                top:0px;
+                cursor: pointer;
             }
         }
     }
