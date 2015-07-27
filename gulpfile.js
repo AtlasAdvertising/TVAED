@@ -1,23 +1,27 @@
 var gulp = require('gulp'),
-	sass = require('gulp-ruby-sass'),
-	prefix = require('gulp-autoprefixer'),
-	ftp = require('gulp-ftp'),
-	rename = require('gulp-rename');
+    sass = require('gulp-ruby-sass'),
+    prefix = require('gulp-autoprefixer'),
+    ftp = require('gulp-ftp'),
+    rename = require('gulp-rename');
 
 // defines path to sass
 var sassRoot = 'build/sass/';
 
 // compile Sass to CSS
-gulp.task('sass-to-css', function() {
-	return gulp.src(sassRoot + 'main.scss')
-		//.pipe(sass())		// non-compressed
-		.pipe(sass({style: 'compressed'}))	// compressed
-		//.pipe(prefix("last 3 versions"))		// non-compressed
-		.pipe(rename({suffix: '.min'}))		// compressed
-		.pipe(gulp.dest('public/css'));
+gulp.task('sass-to-css', function () {
+    return gulp.src(sassRoot + 'main.scss')
+        //.pipe(sass())		// non-compressed
+        .pipe(sass({
+            style: 'compressed'
+        })) // compressed
+        //.pipe(prefix("last 3 versions"))		// non-compressed
+        .pipe(rename({
+            suffix: '.min'
+        })) // compressed
+        .pipe(gulp.dest('public/css'));
 });
 
-// CSS ftp task
+/*// CSS ftp task
 gulp.task('ftp-css', ['sass-to-css'], function() {
 	return gulp.src('public/css/*')
 		.pipe(ftp({
@@ -49,4 +53,4 @@ gulp.task('watch', function() {
 	gulp.watch('public/js/main.js', function() {
 		gulp.run('ftp-js');
 	})
-});
+});*/
