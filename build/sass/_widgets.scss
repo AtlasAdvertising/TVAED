@@ -302,7 +302,7 @@
     
 }
 
-.Staff:first-child .Photo:before {
+.RegionStaff:first-child .Photo:before {
         content: " ";
         display: block;
         height: 30px;
@@ -310,7 +310,7 @@
         margin: 0 0 5px 0;
     }
 
-.RegionStaff .Staff:last-child .Photo:before {
+.RegionStaff:last-child .Photo:before {
         content: " ";
         display: block;
         height: 30px;
